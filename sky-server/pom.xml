@@ -122,6 +122,12 @@
             <artifactId>knife4j</artifactId>
             <version>3.0.2</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
