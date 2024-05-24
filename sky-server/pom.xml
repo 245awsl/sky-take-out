@@ -115,6 +115,13 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
         </dependency>
+
+        <!-- 导入knifej -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j</artifactId>
+            <version>3.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>
