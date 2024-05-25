@@ -13,6 +13,7 @@ import com.sky.utils.JwtUtil;
 import com.sky.vo.EmployeeLoginVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -94,5 +95,18 @@ public class EmployeeController {
         log.info("员工分页查询,参数为:{}", employeePageQueryDTO);
         PageResult pageResult = employeeService.pageQuery(employeePageQueryDTO);
         return Result.success(pageResult);
+    }
+
+    /**
+     * 启动禁用员工账号
+     * 非查询类不需要范型
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("启动禁用员工账号")
+    // 声明前端发来的参数 状态和id
+    public Result startOrStop(@PathVariable("status") Integer status, Long id){
+        log.info("启动禁用员工账号:", status, id);
+        employeeService.startOrStop(status, id);
+        return Result.success();
     }
 }
