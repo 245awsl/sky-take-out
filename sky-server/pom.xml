@@ -119,14 +119,8 @@
         <!-- 导入knifej -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j</artifactId>
-            <version>3.0.2</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
         </dependency>
     </dependencies>
 
